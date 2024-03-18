@@ -1,4 +1,4 @@
-package be.pxl.helpdesk.rest.data;
+package be.pxl.helpdesk.api.data;
 
 import be.pxl.helpdesk.domain.User;
 import be.pxl.helpdesk.domain.UserRole;

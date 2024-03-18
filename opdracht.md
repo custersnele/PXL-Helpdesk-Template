@@ -24,7 +24,7 @@ Vervolledig  de entity klassen User en Ticket. Er is GEEN bi-directionele relati
 <img src="images/user_ticket.png" alt="user_ticket" style="width:300px;"/>
 
 
-Voeg de ontbrekende annotaties toe in de klasse UserController (package be.pxl.helpdesk.rest) zodat het REST endpoint ‘GET /helpdesk/users’  aangeroepen kan worden (zie ook README.md). Na het toevoegen van de annotaties kan je de toepassing opstarten en het endpoint uittesten.
+Voeg de ontbrekende annotaties toe in de klasse UserController (package be.pxl.helpdesk.api) zodat het REST endpoint ‘GET /helpdesk/users’  aangeroepen kan worden (zie ook README.md). Na het toevoegen van de annotaties kan je de toepassing opstarten en het endpoint uittesten.
 
 
  ### Task 2: User story 1
@@ -58,10 +58,9 @@ Unieke id van het aangemaakte ticket of een duidelijke foutmelding.
 ☐ Als alle gegevens geldig zijn, wordt het ticket correct opgeslagen in de databank.\
 
 **Implementatie-details:**\
-Je kan gebruikmaken van de klasse CreateTicketRequest in het package be.pxl.helpdesk.rest.data om de inkomende JSON te mappen naar een object.
 Maak een nieuwe RestController aan: TicketController waarin je het REST endpoint voorziet.
 Je hebt de entity-klasse Ticket al geannoteerd.
-De business-regels zijn al geïmplementeerd: maak gebruik van de methode createTicket(…) in de klasse TicketService (be.pxl.helpdesk.service).
+Maak een nieuwe klasse TicketService aan waar je de methode createTicket(…) implementeert. Schrijf de nodige business-logica.
 
 **Testen (JUnit / Mockito):**\
 ☐  Werk 2 relevante unit testen uit voor de methode createTicket(…) in de klasse TicketService.
@@ -101,7 +100,7 @@ PUT http://localhost:8080/tickets/4 (zie ook README.md)
 ☐ Schrijf 1 unit test voor de RestController waarbij het account van de gebruiker vergrendeld is (en er dus een BusinessException optreedt).\
 
 **Implementatie-details:**\
-☐ Je kan gebruikmaken van de klasse CreateTicketCommentRequest in het package be.pxl.rest.data om de inkomende JSON te laten mappen naar een object.\
+☐ Voorzie het REST-endpoint.\
 ☐ Voeg de nodige validaties toe.\
 ☐ Maak de entity klasse TicketComment en zorg voor een bi-directionele relatie tussen Ticket en TicketComment. Een mogelijke implementatie zie je hieronder in het klassendiagram.\
 ☐ Implementeer de gevraagde businessregels, exception-handling en unit testen.\
@@ -122,7 +121,7 @@ URL: http://localhost:8080/mytickets?reporter=jwhittlesey7
 ☐ Een overzichtelijke HTML-pagina met alle tickets aangemaakt door de reporter met de opgegeven username wordt getoond. Alle bijhorende comments (in chronologische volgorde) worden bij de tickets weergeven.\
 
 **Implementatie-details:**\
-Je mag dus kiezen of je gebruikmaakt van een servlet of Thymeleaf. Als je kiest voor een Servlet kan je gebruikmaken van de hulpmethoden in de klasse TicketOverviewServlet (package be.pxl.helpdesk.servlet). Ook de klassen UserDTO, TicketDTO en TicketCommentDTO zijn reeds voorzien (sommige methoden staan nog in commentaar omdat je eerst user story 2 moet implementeren).\
+Je mag dus kiezen of je gebruikmaakt van een servlet of Thymeleaf. Als je kiest voor een Servlet kan je gebruikmaken van de hulpmethoden in de klasse TicketOverviewServlet.\
 Je zal ook een query moeten implementeren om alle tickets aangemaakt door de gebruiker met de opgegeven username op te halen.
 
 

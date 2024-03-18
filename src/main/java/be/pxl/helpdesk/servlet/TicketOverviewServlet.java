@@ -1,7 +1,6 @@
 package be.pxl.helpdesk.servlet;
 
-import be.pxl.helpdesk.rest.data.TicketDTO;
-import be.pxl.helpdesk.service.TicketService;
+import be.pxl.helpdesk.api.data.TicketDTO;
 
 import java.io.PrintWriter;
 import java.time.format.DateTimeFormatter;

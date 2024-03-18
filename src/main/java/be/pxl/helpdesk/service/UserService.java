@@ -1,7 +1,7 @@
 package be.pxl.helpdesk.service;
 
 import be.pxl.helpdesk.repository.UserRepository;
-import be.pxl.helpdesk.rest.data.UserDTO;
+import be.pxl.helpdesk.api.data.UserDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,6 +17,7 @@ public class UserService {
 	}
 
 	public List<UserDTO> getUsers() {
-		return userRepository.findAll().stream().map(UserDTO::new).collect(Collectors.toList());
+		// TODO: implement this method
+		throw new UnsupportedOperationException("Not implemented yet.");
 	}
 }
