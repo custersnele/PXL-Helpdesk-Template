@@ -78,7 +78,7 @@ where parameter `{ticket_id}` refers to a valid id of a ticket
 
 ### Validation script 
 
-In the resources directory you can find a script examen_valideren.sh to validate
+In the resources directory you can find a script validate_endpoints.sh to validate
 your solution.
 
 When you run the script you should see the following output:
