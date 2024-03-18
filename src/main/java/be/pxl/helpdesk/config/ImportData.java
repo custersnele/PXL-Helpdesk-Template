@@ -3,6 +3,7 @@ package be.pxl.helpdesk.config;
 import be.pxl.helpdesk.domain.Ticket;
 import be.pxl.helpdesk.domain.User;
 import be.pxl.helpdesk.domain.UserRole;
+import be.pxl.helpdesk.repository.TicketRepository;
 import be.pxl.helpdesk.repository.UserRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

@@ -8,13 +8,6 @@ import java.time.format.DateTimeFormatter;
 public class TicketOverviewServlet {
 	private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm:ss");
 
-	private final TicketService ticketService;
-
-	public TicketOverviewServlet(TicketService ticketService) {
-		this.ticketService = ticketService;
-	}
-
-
 	private void writeTicketDTO(PrintWriter writer, TicketDTO ticket) {
 		writer.println("<hr/>");
 		writer.println("<div class=\"row\">");
